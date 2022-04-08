@@ -36,12 +36,29 @@
             (strlen($nome) > 3) &&
             (strpos($email, ".") !== false) && (is_numeric($age) !== false)
         ) {
-            echo '<h1>Accesso Riuscito</h1>';
+            echo "<h1>Accesso Riuscito</h1>";
         } else {
-            echo '<h1>Accesso Negato</h1>';
+            echo "<h1>Accesso Negato</h1>";
         }
     }
+
+
     ?>
+    <ul>
+        <?php
+        $numbers = array();
+
+        while (count($numbers) < 16) {
+            $random_number = rand();
+            if (array_search($random_number, $numbers) !== false) {
+                array_push($numbers, $random_number);
+                echo "<li>$random_number</li>";
+            } else {
+            }
+        };
+
+        ?>
+    </ul>
 </body>
 
 </html>
