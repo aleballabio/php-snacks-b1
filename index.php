@@ -48,9 +48,9 @@
         <?php
         $numbers = array();
 
-        while (count($numbers) < 16) {
+        while (count($numbers) < 15) {
             $random_number = rand();
-            if (array_search($random_number, $numbers) !== false) {
+            if (array_search($random_number, $numbers) === false) {
                 array_push($numbers, $random_number);
                 echo "<li>$random_number</li>";
             } else {
