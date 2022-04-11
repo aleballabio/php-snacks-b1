@@ -47,9 +47,9 @@
     <ul>
         <?php
         $numbers = array();
-
-        while (count($numbers) < 15) {
-            $random_number = rand();
+        $how_many_numbers  = 15;
+        while (count($numbers) < $how_many_numbers) {
+            $random_number = rand(1, 100);
             if (array_search($random_number, $numbers) === false) {
                 array_push($numbers, $random_number);
                 echo "<li>$random_number</li>";
