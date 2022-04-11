@@ -59,6 +59,20 @@
 
         ?>
     </ul>
+
+
+    <?php
+
+    $paragraph = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur neque impedit fugit provident quasi repellat cum quo vel aliquid, vero repellendus quae numquam incidunt, nam amet praesentium quia consequuntur alias! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur neque impedit fugit provident quasi repellat cum quo vel aliquid, vero repellendus quae numquam incidunt, nam amet praesentium quia consequuntur alias!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur neque impedit fugit provident quasi repellat cum quo vel aliquid, vero repellendus quae numquam incidunt, nam amet praesentium quia consequuntur alias!";
+    $paragraph_divided = explode(".", $paragraph);
+    ?>
+    <p>
+        <?php
+        for ($i = 1; count($paragraph_divided) > $i; $i++) {
+            echo "$paragraph_divided[$i].<br>";
+        }
+        ?>
+    </p>
 </body>
 
 </html>
